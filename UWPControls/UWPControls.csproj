@@ -96,7 +96,9 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\ExpandedGridView.cs" />
-    <Compile Include="Controls\FloatingButton.cs" />
+    <Compile Include="Controls\FloatingButtonExpanded.cs" />
+    <Compile Include="Controls\FloatingButtonPrimary.cs" />
+    <Compile Include="Controls\FloatingButtonSecondary.cs" />
     <Compile Include="Controls\ToggleButtonExpanded.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>

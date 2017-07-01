@@ -17,13 +17,15 @@ namespace UWPControls.Controls
     public sealed class ExpandedGridView : GridView
     {
         private Grid rootGrid;
-        private const int Row_Height = 130;
-        
+        private const int Row_Width = 134;
+        public const int Row_Height = 135;
+
         public string CountItemsHide
         {
             get { return (string)GetValue(CountItemsHideProperty); }
             set { SetValue(CountItemsHideProperty, value); }
         }
+
 
         // Using a DependencyProperty as the backing store for Size.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty CountItemsHideProperty =
@@ -36,11 +38,18 @@ namespace UWPControls.Controls
         }
         private void ExpandedGridView_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            var totalItemsVisible = Math.Floor(e.NewSize.Width / Row_Height);
+            var totalItemsVisible = Math.Round(e.NewSize.Width / Row_Width);
 
             var totalItemsHide = Items.Count - totalItemsVisible;
 
-            CountItemsHide = "+ " + totalItemsHide.ToString();
+            if (totalItemsHide > 0)
+            {
+                CountItemsHide = "+ " + totalItemsHide.ToString();
+            }
+            else
+            {
+                CountItemsHide = string.Empty;
+            }
         }
         private void OpenExpandedToggleButton_Checked(object sender, RoutedEventArgs e)
         {

@@ -18,7 +18,9 @@
     </Page.Resources>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <controls:ExpandedGridView ItemTemplate="{StaticResource MediaItemTemplate}" ItemsSource="{x:Bind Items, Mode=OneWay}" />
-        <controls:FloatingButton />
+        <controls:ExpandedGridView  ItemTemplate="{StaticResource MediaItemTemplate}" ItemsSource="{x:Bind Items, Mode=OneWay}" />
+        <controls:FloatingButtonExpanded />
+        <controls:FloatingButtonSecondary  VerticalAlignment="Bottom" Icon="&#xE104;" Visibility="Visible" Margin="5" HorizontalAlignment="Left" />
+
     </Grid>
 </Page>

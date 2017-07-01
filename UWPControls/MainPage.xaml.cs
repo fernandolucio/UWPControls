@@ -37,7 +37,7 @@ namespace UWPControls
             this.InitializeComponent();
             Items = new ObservableCollection<Media>();
 
-            for (int i = 0; i < 50; i++)
+            for (int i = 0; i < 10; i++)
             {
                 Items.Add(new Media { Image = new BitmapImage(new Uri(@"ms-appx:///Assets/photo.jpg")) });
             }
